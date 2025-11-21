@@ -1,0 +1,45 @@
+.statistics__hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(/images/MilkyWay.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.statistics__hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.statistics__hero__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  width: 50%;
+  z-index: 1;
+}
+
+.statistics__hero__container h1 {
+  font-size: var(--font-title-hero);
+}
+
+.statistics__hero__container p {
+  color: var(--c-gray);
+}
+
+@media (max-width: 48em) {
+  .statistics__hero__container h1 {
+    font-size: var(--font-title-small-screens);
+  }
+  .statistics__hero__container p {
+    font-size: var(--font-paragraph-small-screens);
+    line-height: 1.2;
+  }
+}

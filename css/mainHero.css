@@ -1,0 +1,101 @@
+.main_page__hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background: url(/images/Earth.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.main_page__hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.main_page__hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 50%;
+  z-index: 1;
+  margin-left: 15vw;
+}
+
+.main_page__hero__container h1 {
+  font-size: var(--font-title-hero);
+}
+
+.main_page__hero__container p {
+  color: var(--c-gray);
+}
+
+.main_page__hero__container a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  font-size: var(--font-paragraph);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-title);
+  border-radius: 0.5rem;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  background-color: var(--c-accent);
+  color: var(--c-white);
+  border: none;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.main_page__hero__container a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 0;
+  z-index: -1;
+  border-radius: 0.5rem;
+  background: var(--c-accent-alt);
+  transition: all 0.3s ease;
+}
+
+.main_page__hero__container a:hover {
+  color: var(--c-black);
+}
+
+.main_page__hero__container a:hover::after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
+
+.main_page__wrapper {
+  background: var(--c-black);
+  background: var(--bg-image);
+}
+
+@media (max-width: 48em) {
+  .main_page__hero__container h1 {
+    font-size: var(--font-title-small-screens);
+  }
+
+  .main_page__hero__container p {
+    font-size: var(--font-paragraph-small-screens);
+    line-height: 1.2;
+  }
+
+  .main_page__hero__container a {
+    font-size: var(--font-paragraph-small-screens);
+    padding: 0.4rem 1rem;
+  }
+}

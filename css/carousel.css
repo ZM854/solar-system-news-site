@@ -1,0 +1,183 @@
+.spacecraft__carousel {
+  width: 100%;
+  background: var(--c-black);
+  background-image: var(--bg-image);
+}
+
+.spacecraft__carousel__box {
+  position: relative;
+  width: 100%;
+}
+
+.spacecraft__carousel__container {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.spacecraft__carousel__container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll_btns {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 5%;
+  bottom: 5%;
+  gap: 1rem;
+}
+
+.scroll_right__btn,
+.scroll_left__btn {
+  background: var(--bg-glass-light);
+  border-radius: 50%;
+  backdrop-filter: var(--glass-filter);
+  -webkit-backdrop-filter: var(--glass-filter);
+  box-shadow: var(--glass-shadow);
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  left: 5%;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll_right__btn svg,
+.scroll_left__btn svg {
+  color: var(--c-white);
+  width: 50%;
+  height: 50%;
+}
+
+.spacecraft__carousel__element {
+  scroll-snap-align: start;
+  flex: 0 0 100%;
+  aspect-ratio: 5 / 3;
+  background-color: var(--c-accent);
+  padding: 1rem;
+  position: relative;
+}
+.spacecraft__carousel__element img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.spacecraft__carousel__element__text {
+  position: absolute;
+  z-index: 1;
+  bottom: 3rem;
+  left: 5%;
+  width: 30%;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  background: var(--bg-glass-dark);
+  backdrop-filter: var(--glass-filter);
+  -webkit-backdrop-filter: var(--glass-filter);
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.spacecraft__carousel__element__text h3 {
+  font-weight: var(--font-weight-title);
+  font-size: var(--font-title);
+}
+
+.spacecraft__carousel__nav {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.spacecraft__carousel__nav a {
+  height: 1rem;
+  width: 1rem;
+  background: var(--c-white);
+  opacity: 0.5;
+  border-radius: 50%;
+  backdrop-filter: var(--glass-filter);
+  -webkit-backdrop-filter: var(--glass-filter);
+  box-shadow: var(--glass-shadow);
+  transform: opacity 0.5s ease;
+}
+
+.spacecraft__carousel__nav a.active {
+  opacity: 1;
+  background: var(--c-accent);
+  transform: scale(1.2);
+}
+
+.mobile__text {
+  padding: 1rem;
+  text-align: center;
+}
+
+.mobile__text__element {
+  display: none;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.mobile__text__element h3 {
+  margin-bottom: 1rem;
+  font-size: var(--font-title-small-screens);
+}
+
+.mobile__text__element p {
+  font-size: var(--font-paragraph-small-screens);
+  line-height: 1.2;
+}
+
+@media (min-width: 48.01em) {
+  .mobile__text {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .spacecraft__carousel__element__text {
+    display: none;
+  }
+  .spacecraft__carousel__element__text {
+    width: 50%;
+    gap: 0.5rem;
+  }
+
+  .spacecraft__carousel__element__text h3 {
+    font-weight: var(--font-weight-title);
+    font-size: var(--font-title-small-screens);
+  }
+
+  .spacecraft__carousel__element__text p {
+    font-size: var(--font-paragraph-small-screens);
+  }
+  .scroll_right__btn,
+  .scroll_left__btn {
+    width: 2rem;
+    height: 2rem;
+    font-size: var(--font-paragraph-small-screens);
+  }
+
+  .spacecraft__carousel__nav {
+    gap: 0.5rem;
+  }
+  .spacecraft__carousel__nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}

@@ -1,0 +1,62 @@
+:root {
+  --c-white: hsl(0, 0%, 100%);
+  --c-gray: hsl(0, 0%, 90%);
+  --c-black: hsl(0, 0%, 0%);
+  --c-accent: #ff9700;
+  --c-accent-alt: #eaf81d;
+
+  --bg-image: url(/images/Stars.jpg);
+  --bg-glass-light: rgba(255, 255, 255, 0.2);
+  --bg-glass-dark: rgba(0, 0, 0, 0.5);
+  --glass-filter: blur(0.2rem);
+  --glass-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+
+  --font-title-hero: 3rem;
+  --font-title: 2rem;
+  --font-paragraph: 1rem;
+  --font-title-small-screens: 1.5rem;
+  --font-title-mobiles: 1.2rem;
+  --font-paragraph-small-screens: 0.8rem;
+
+  --font-weight-title: 700;
+  --font-weight-paragraph: 400;
+
+  --font-family: "Exo 2", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-paragraph);
+  font-size: var(--font-paragraph);
+  color: var(--c-white);
+  background: var(--c-black);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: none;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
