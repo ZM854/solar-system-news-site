@@ -5,7 +5,7 @@
   --c-accent: #ff9700;
   --c-accent-alt: #eaf81d;
 
-  --bg-image: url(images/Stars.jpg);
+  --bg-image: url(../images/Stars.jpg);
   --bg-glass-light: rgba(255, 255, 255, 0.2);
   --bg-glass-dark: rgba(0, 0, 0, 0.5);
   --glass-filter: blur(0.2rem);

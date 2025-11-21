@@ -4,7 +4,7 @@
   align-items: center;
   min-height: 100vh;
   background: var(--c-black);
-  background: url(images/stargaze.jpg);
+  background: url(../images/stargaze.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
