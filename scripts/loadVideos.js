@@ -42,7 +42,7 @@ document.querySelectorAll(".news__video").forEach((videoBlock) => {
   const img = videoBlock.querySelector(".video__thumb");
 
   const placeholder = document.createElement("img");
-  placeholder.src = "/images/placeholder.png";
+  placeholder.src = "images/placeholder.png";
   placeholder.classList.add("video__placeholder");
 
   videoBlock.prepend(placeholder);
