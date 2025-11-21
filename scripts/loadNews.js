@@ -1,7 +1,7 @@
 "use strict";
 async function loadNews() {
   try {
-    const res = await fetch("/data/news.json");
+    const res = await fetch("data/news.json");
     const news = await res.json();
     const container = document.querySelector(".news");
     const loadMoreBtn = document.getElementById("loadMoreBtn");
