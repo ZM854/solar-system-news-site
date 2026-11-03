@@ -5,12 +5,15 @@ An informational website about the Solar System, space exploration, and astronom
 A university coursework project developed to practice HTML, CSS, and JavaScript without using frameworks. The website consists of five pages featuring interactive elements, animations, and responsive layouts.
 
 ## Screenshots
-
 ![Home page](docs/screenshots/home.png)
-![News page](docs/screenshots/news.png)
-![Research page](docs/screenshots/researches.png)
-![Space statistics](docs/screenshots/statistics.png)
-![Gallery](docs/screenshots/gallery.png)
+
+| News                                    | Research                                          |
+|:---------------------------------------:|:-------------------------------------------------:|
+| ![News page](docs/screenshots/news.png) | ![Research page](docs/screenshots/researches.png) |
+
+| Statistics                                          | Gallery                                       |
+|:---------------------------------------------------:|:---------------------------------------------:|
+| ![Statistics page](docs/screenshots/statistics.png) | ![Gallery page](docs/screenshots/gallery.png) |
 
 ## Features
 
